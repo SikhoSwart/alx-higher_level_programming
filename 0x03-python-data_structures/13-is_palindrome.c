@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stddef.h>
 /**
  * pali - checks if palindrome
  * @h: head
