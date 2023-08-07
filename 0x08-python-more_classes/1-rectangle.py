@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+"""Write a class that defines a rectangle by, (based on 0-rectangle.py)."""
+
+
+class Rectangle:
+    """Defines a rectangle."""
+    def __init__(self, width=0, height=0):
+        """Private instance attribute: width and height."""
+        self.__width = width
+        self.__height = height
+
+    @property
+    def width(self):
+        """Property to retrieve width."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Property setter to set width."""
+        self.__width = value
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+
+    @property
+    def height(self):
+        """Property to retrieve height."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Property setter to set height."""
+        self.__height = value
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
