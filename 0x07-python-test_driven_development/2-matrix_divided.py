@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Function that divides the elemets of a matrix."""
+
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix."""
     mess = "matrix must be a matrix (list of lists) of integers/floats"

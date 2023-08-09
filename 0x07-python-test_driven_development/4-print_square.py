@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Function that prints a square."""
+
+
 def print_square(size):
     """Prints a square with the character #."""
     if type(size) != int:

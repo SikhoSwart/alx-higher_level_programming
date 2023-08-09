@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Function that prints first name and last name."""
+
+
 def say_my_name(first_name, last_name=""):
     """Prints first and last name."""
     if type(first_name) != str:
