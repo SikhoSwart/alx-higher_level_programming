@@ -3,6 +3,10 @@
 How to use 7-base_geometry.py
 ============================================
 
+This library has a function ``integer_validator()``
+
+``integer_validator`` validates the integer variable value.
+
 Importing the function:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
