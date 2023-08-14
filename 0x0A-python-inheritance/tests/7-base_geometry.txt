@@ -1,14 +1,17 @@
-# The ``7-base_geometry.py`` module
 ============================================
 How to use 7-base_geometry.py
 ============================================
 
-This library has a function ``integer_validator()``
+This library is very simple, since it only has one function called
+ ''integer_validator()''.
 
-``integer_validator`` validates the integer variable value.
+Numbers:
+========
+''integer_validator()'' returns True if a num is integer.
+:: with positives integers
+   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+   >>> bg = BaseGeometry()
 
-Importing the function:
-    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Test if area is not implemented.
     >>> bg = BaseGeometry()
