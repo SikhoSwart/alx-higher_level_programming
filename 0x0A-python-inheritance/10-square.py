@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
 """
-Write a class Square that inherits from Rectangle (9-rectangle.py):
+Write a class Square that inherits fr0m Rectangle (9-rectangle.py):
 """
 
 
