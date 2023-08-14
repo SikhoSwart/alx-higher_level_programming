@@ -1,19 +1,38 @@
 #!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
 """
-module with class BaseGeometry
+Write a class Square that inherits from Rectangle (9-rectangle.py):
 """
 
 
-class Square(Rectangle):
-    """Square class that inherits from Rectangle that inherits BaseGeometry"""
+class BaseGeometry:
+    """BaseGeometry class
+    """
+    def area(self):
+        """Raises an Exception
+        """
+        raise Exception("area() is not implemented")
 
+    def integer_validator(self, name, value):
+        """Validates value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+
+
+class Square(Rectangle):
+    """Square class
+    """
     def __init__(self, size):
-        """Method for initialized the attrubutes"""
-        super().__init__(size, size)
-        self.integer_validator("size", size)
+        """Instantiation
+        """
         self.__size = size
+        BaseGeometry.integer_validator(self, "size", size)
+        super().__init__(size, size)
 
     def area(self):
-        """rectangle area"""
+        """Returns area
+        """
         return self.__size ** 2
