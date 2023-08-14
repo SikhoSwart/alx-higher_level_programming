@@ -10,29 +10,16 @@ class Rectangle(BaseGeometry):
     """Class Rectangle"""
 
     def __init__(self, width, height):
-        """Creates new instances of Rectangle.
-
-        Args:
-            width (int): width of rectangle.
-            height (int): height of rectangle.
-        """
+        """Creates new instances of Rectangle."""
         self.__width = width
         self.__height = height
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
     def area(self):
-        """Calculates area of a rectangle.
-
-        Returns:
-            int: area.
-        """
+        """Calculates area of a rectangle."""
         return self.__width * self.__height
 
     def __str__(self):
-        """Returns string representation of the rectangle.
-
-        Returns:
-            str: string representation of rectangle.
-        """
+        """Returns string representation of the rectangle."""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
