@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
 """
 Write a class Square that inherits fr0m Rectangle (9-rectangle.py):
 """
+
+
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class BaseGeometry:
