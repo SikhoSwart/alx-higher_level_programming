@@ -11,13 +11,11 @@ class BaseGeometry:
     """BaseGeometry class
     """
     def area(self):
-        """Raises an Exception
-        """
+        """Raises an Exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validates value
-        """
+        """Validates value"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
@@ -25,16 +23,13 @@ class BaseGeometry:
 
 
 class Square(Rectangle):
-    """Square class
-    """
+    """Square class"""
     def __init__(self, size):
-        """Instantiation
-        """
+        """Instantiation of size"""
         self.__size = size
         BaseGeometry.integer_validator(self, "size", size)
         super().__init__(size, size)
 
     def area(self):
-        """Returns area
-        """
+        """Returns area"""
         return self.__size ** 2
