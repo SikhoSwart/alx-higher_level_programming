@@ -14,6 +14,5 @@ def pascal_triangle(n):
 
     p_tri = [[1]]
     for i in range(n - 1):
-        p_tri.append([j + n for j, n in zip(p_tri[-1] + [0],
-                                             [0] + p_tri[-1])])
+        p_tri.append([j + n for j, n in zip(p_tri[-1] + [0], [0] + p_tri[-1])])
     return (p_tri)
