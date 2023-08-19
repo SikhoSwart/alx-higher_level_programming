@@ -70,3 +70,35 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
+        self.__x = value
+
+    def area(self):
+        """Returns the area value of the Rectangle instance."""
+        return (self.__height * self.__width)
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with the character #."""
+        for i in range(self.__y):
+            print()
+        for j in range(self.__height):
+            for z in range(self.__x):
+                print(' ', end='')
+            for w in range(self.__width):
+                print('#', end='')
+            print()
+
+    def __str__(self):
+        """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+               self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute."""
+        if args:
+            attributes = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
