@@ -11,6 +11,6 @@ if __name__ == "__main__":
     JOIN states ON cities.state_id = states.id ORDER BY cities.id")
     rows = cur.fetchall()
     for r in rows:
-        print(r
+        print(r)
     cur.close()
     db.close()
