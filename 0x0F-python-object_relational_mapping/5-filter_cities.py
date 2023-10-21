@@ -16,4 +16,4 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     print(", ".join(city[0] for city in rows))
     cur.close()
-    db.close)
+    db.close()
